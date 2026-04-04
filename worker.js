@@ -418,6 +418,11 @@ class Term{
     await this.sl(100);
     await this.pr(\`<div class="dp"><span class='hlt'>System Health</span><br/>[VFS]:      MOUNTED<br/>[Notebooks]: 7 demos ready<br/>[Sims]:     4 scenarios ready<br/>[Privacy]:  ENFORCED<br/>[Uptime]:   \${Math.floor(Math.random()*720+24)}h \${Math.floor(Math.random()*60)}m</div>\`);
   }
+  getItemContent(item){
+    if(item.type==='file')return item.content||'';
+    if(item.type==='notebook')return item.cells?item.cells.map(c=>c.src+(c.out||'')).join(' '):'';
+    return '';
+  }
   async srch(a){
     if(a.length<2)return await this.pr("Usage: search &lt;query&gt;");
     let q=a.slice(1).join(' ').toLowerCase(),results=[],seen=new Set();
@@ -425,7 +430,7 @@ class Term{
       for(let k of Object.keys(node)){
         let item=node[k],fullPath=(path?path+"/":"")+k;
         if(item.type==='file'||item.type==='notebook'){
-          let content=(item.content||item.cells?.map(c=>c.src+(c.out||'')).join(' ')||'').toLowerCase();
+          let content=this.getItemContent(item).toLowerCase();
           if((k.toLowerCase().includes(q)||content.includes(q))&&!seen.has(fullPath)){
             seen.add(fullPath);results.push({path:fullPath,type:item.type});
           }
