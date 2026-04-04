@@ -177,6 +177,8 @@ class Term {
     const BATCH = 5; // characters per batch for performance
     while (i < t.length) {
       if (this.sk) {
+        // t contains pre-trusted VFS content with embedded HTML tags;
+        // only VFS file content flows here—never user input.
         d.innerHTML = t.replace(/\n/g, "<br/>");
         break;
       }
@@ -472,12 +474,19 @@ class Term {
         if (nb[k].type === 'notebook') {
           let title = nb[k].cells[0].src.split('\n')[0].replace(/^##\s*/, '');
           o += `  <span class='inf'>●</span> <span class='hlt'>${esc(k)}</span>`;
-          o += ` <button class="nb-run-btn" onclick="window._term.nbRun('${esc(k)}')">▶ Run</button>`;
+          o += ` <button class="nb-run-btn" data-nb="${esc(k)}">▶ Run</button>`;
           o += `<br/>    <span class='sys'>${esc(title)}</span><br/>`;
         }
       }
       o += "<br/>Run with: <span class='hlt'>notebook run &lt;name&gt;</span>";
       await this.pr(o);
+      // Attach click listeners via addEventListener (avoids inline event handlers)
+      this.o.querySelectorAll('.nb-run-btn[data-nb]').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const name = btn.getAttribute('data-nb');
+          if (name) this.nbRun(name);
+        });
+      });
     } else if (sub === 'run') {
       if (!a[2]) return await this.pr("Usage: notebook run &lt;name&gt;");
       await this.nbRun(a[2]);

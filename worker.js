@@ -6,7 +6,7 @@
  *   GET /                   → HTML terminal shell
  *   GET /style.css          → Terminal stylesheet
  *   GET /worker-terminal.js → Client-side terminal logic
- *   GET /api/config         → CFG + ASC + boot log (small, inline-safe)
+ *   GET /scripts/config.js  → CFG + ASC + boot log (small, inline-safe)
  *   GET /api/vfs            → Virtual File System data (lazy loaded)
  *   GET /api/scenarios      → Simulation scenarios (lazy loaded)
  */
@@ -50,7 +50,7 @@ function serveHTML() {
     <span class="cur" id="cur"></span>
   </div>
 </div>
-<script src="/api/config"></script>
+<script src="/scripts/config.js"></script>
 <script src="/worker-terminal.js"></script>
 </body>
 </html>`;
@@ -129,7 +129,7 @@ export default {
         return serveCSS();
       case '/worker-terminal.js':
         return serveTerminalJS();
-      case '/api/config':
+      case '/scripts/config.js':
         return serveConfig();
       case '/api/vfs':
         return serveVFS();
