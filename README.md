@@ -7,13 +7,14 @@
 
 ## Overview
 
-ARES-E is a comprehensive, vendor-agnostic evaluation harness for benchmarking AI autonomous systems across **critical sectors**:
+ARES-E is a comprehensive, vendor-agnostic evaluation harness for benchmarking AI autonomous systems across the **Critical Quad**:
 
 | Module | Domain | Focus |
 |--------|--------|-------|
 | **EWIS** | Energy & Weather | Grid operations, PUE monitoring, AI workload efficiency |
 | **WOIK** | Water Operations | Hydraulic systems, SCADA interoperability, water quality |
 | **PHIAK** | Public Health | ED/ICU capacity, syndromic surveillance, privacy-first design |
+| **Data** | Data Center Optimization | Capacity planning, PUE, assisted attribution, cooling optimization |
 
 ### Lines of Effort (LOE)
 - **LOE 1** — Autonomous Infrastructure Monitoring & Alerting
