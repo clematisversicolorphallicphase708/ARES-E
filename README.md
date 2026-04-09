@@ -7,7 +7,7 @@
 
 ## Overview
 
-ARES-E is a comprehensive, vendor-agnostic evaluation harness for benchmarking AI autonomous systems across the **Critical Quad**:
+ARES-E is a comprehensive, vendor-agnostic evaluation harness for benchmarking AI autonomous systems across **critical sectors**:
 
 | Module | Domain | Focus |
 |--------|--------|-------|
@@ -61,19 +61,19 @@ ARES-E/
 ```
 ┌──────────────────────────────────────────────────┐
 │       ARES-E Evaluation Orchestrator             │
-│       (Dashboard Controller)                      │
+│       (Dashboard Controller)                     │
 ├─────────────┬─────────────────┬──────────────────┤
 │    EWIS     │      WOIK       │     PHIAK        │
-│   Energy    │     Water       │    Health         │
+│   Energy    │     Water       │    Health        │
 ├─────────────┴─────────────────┴──────────────────┤
-│   Synthetic Data Engine (Mulberry32 PRNG)         │
-│   └─ Diurnal cycles + Gaussian noise + anomalies  │
+│   Synthetic Data Engine (Mulberry32 PRNG)        │
+│   └─ Diurnal cycles + Gaussian noise + anomalies │
 ├──────────────────────────────────────────────────┤
-│   Alert Engine (18 rules) + Forecast Engine       │
+│   Alert Engine (18 rules) + Forecast Engine      │
 ├──────────────────────────────────────────────────┤
-│   Chart.js Visualization Layer                    │
+│   Chart.js Visualization Layer                   │
 ├──────────────────────────────────────────────────┤
-│   GitHub Pages / Cloudflare Workers Runtime       │
+│   GitHub Pages / Cloudflare Workers Runtime      │
 └──────────────────────────────────────────────────┘
 ```
 
